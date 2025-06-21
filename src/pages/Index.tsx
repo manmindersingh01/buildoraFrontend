@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useCallback, useMemo } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import axios from "axios";
 import {
   SignedIn,
@@ -8,7 +8,6 @@ import {
   UserButton,
 } from "@clerk/clerk-react";
 
-import { MyContext } from "../context/FrontendStructureContext";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { ExternalLink, Calendar, Code2, Trash2 } from "lucide-react";
@@ -127,7 +126,6 @@ const Index = () => {
   const [dbUser, setDbUser] = useState<DbUser | null>(null);
 
   const navigate = useNavigate();
-  const { value, setValue } = useContext(MyContext);
   const { user: clerkUser, isLoaded } = useUser();
 
   // Memoized handlers to prevent unnecessary re-renders

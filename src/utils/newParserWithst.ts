@@ -133,7 +133,6 @@ export {
   flattenStructure,
   getFileStatus,
   getCodeFileByPath,
-  CodeFile,
-  StructureNode,
-  ParsedResult,
 };
+
+export type { CodeFile, StructureNode, ParsedResult };
